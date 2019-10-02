@@ -26,4 +26,5 @@
     copy: src=templates/atmosphere-v1.jar dest={{doc_root}}/atmosphere-v1.jar
 
   - name: Start Atmosphere Application. 
-    shell: /usr/bin/java -jar {{doc_root}}/atmosphere-v1.jar --httpPort=8081 &
+    shell: nohup /usr/bin/java -jar {{doc_root}}/atmosphere-v1.jar --httpPort=8081 & > nohup.out
+
